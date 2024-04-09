@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemption Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Exemption Form</h1>
+    </header>
+    
+    <section>
+        <h2>Request Form</h2>
+        <p>If you have previously completed certain units at Riara University and believe that they are equivalent to units in your current program, you can request an exemption.</p>
+        <p>Please fill out the form below to submit your exemption request:</p>
+    </section>
+    
+    <main>
+        <form>
+            <label for="student_name">Student Name:</label>
+            <input type="text" id="student_name" name="student_name" required><br>
+            
+            <label for="student_id">Student ID:</label>
+            <input type="text" id="student_id" name="student_id" required><br>
+            
+            <label for="unit_code">Unit Code:</label>
+            <input type="text" id="unit_code" name="unit_code" required><br>
+            
+            <label for="unit_name">Unit Name:</label>
+            <input type="text" id="unit_name" name="unit_name" required><br>
+            
+            <label for="exemption_reason">Exemption Reason:</label>
+            <textarea id="exemption_reason" name="exemption_reason" rows="4" required></textarea><br>
+            
+            <fieldset>
+                <legend>Select Exemption Type:</legend>
+                <label>
+                    <input type="radio" name="exemption_type" value="unit"> Unit Exemption
+                </label>
+                <label>
+                    <input type="radio" name="exemption_type" value="module"> Module Exemption
+                </label>
+            </fieldset><br>
+            
+            <fieldset>
+                <legend>Select Available Trimeseter:</legend>
+                <label>
+                    <input type="checkbox" name="semester" value="semester1"> Trimeseter 1
+                </label>
+                <label>
+                    <input type="checkbox" name="semester" value="semester2"> Trimeseter 2
+                </label>
+                <label>
+                    <input type="checkbox" name="semester" value="semester3"> Trimeseter 3
+                </label>
+            </fieldset><br>
+            
+            <label for="available_units">Available Units:</label>
+            <input list="unit_list" id="available_units" name="available_units">
+            <datalist id="unit_list">
+                <option value="RCS101">Introduction to Computer Systems</option>
+                <option value="RCS201">Calculus</option>
+                <option value="RFC301">Ethics and Cultural Development</option>
+            </datalist><br><br>
+            
+            <button type="submit">Submit Exemption Request</button>
+        </form>
+    </main>
+    
+    <section>
+        <h2>Exemption Process</h2>
+        <ol>
+            <li>Complete the exemption request form above.</li>
+            <li>Our team will review your request and verify the eligibility of the exemption.</li>
+            <li>If approved, you will receive a notification via email.</li>
+            <li>Approved exemptions will be updated in your academic records.</li>
+        </ol>
+    </section>
+    
+</body>
+</html>
